@@ -36,7 +36,7 @@ render (){
         <label htmlFor=''>
         Name
             <input 
-            value={this.state.name} onCnahge={this.handleInputChange}
+            value={this.state.name} onChange={this.handleInputChange}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -48,7 +48,7 @@ render (){
             Number
             <input
             
-              value={this.state.number} onCnahge={this.handleInputChange}
+              value={this.state.number} onChange={this.handleInputChange}
               type="tel"
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

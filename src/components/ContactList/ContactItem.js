@@ -4,15 +4,13 @@ import PropTypes from 'prop-types';
  const ContactItem = ({ name, number, buttonDelete }) => {
   return (
     <li>
-      <p> {name}: </p>
-      <p>{number}</p>
+      {name}: {number}
       <button
-       
         name="button"
         type="button"
         buttonDelete={buttonDelete}
       >
-        Delete contact
+        Delete
       </button>
     </li>
   );
