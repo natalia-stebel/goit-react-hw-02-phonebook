@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { ContactItem } from 'components/ContactList/ContactItem';
 
 
- const ContactList = ({ contacts, buttonDelete}) => {
+ const ContactList = ({ contacts, onButtonDelete}) => {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => {
@@ -11,7 +11,7 @@ import { ContactItem } from 'components/ContactList/ContactItem';
             key={id}
             name={name}
             number={number}
-            buttonDelete={() => buttonDelete(id)}
+            onButtonDelete={onButtonDelete}
           />
         );
       })}
