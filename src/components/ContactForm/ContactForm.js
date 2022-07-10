@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import css from "./ContactForm.module.css"
 
  class ContactForm extends Component {
   
@@ -32,10 +33,15 @@ reset = () =>{
 render (){
 
    return(
+    
+          <div className={css.contactForm}>
     <form action="submit" onSubmit={this.handleSubmit}>
-        <label htmlFor=''>
-        Name
+        <label className={css.label}>
+        <span className={css.name}>
+            Name 
+        </span>
             <input 
+            className={css.input}
             value={this.state.name} onChange={this.handleInputChange}
             type="text"
             name="name"
@@ -44,10 +50,12 @@ render (){
             required/>
         </label>
 
-        <label htmlFor=''>
-            Number
+        <label className={css.label}>
+          <span className={css.name}>
+            Number 
+           </span>
             <input
-            
+              className={css.input}
               value={this.state.number} onChange={this.handleInputChange}
               type="tel"
               name="number"
@@ -56,11 +64,11 @@ render (){
               required
             />
           </label>
-          <button type="submit" >
+          <button type="submit"  className={css.addButton}>
             Add contact
           </button>
     </form>
-   )
+   </div>)
 }
 }
 

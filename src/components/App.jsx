@@ -3,6 +3,7 @@ import ContactForm from './ContactForm';
 import { nanoid } from 'nanoid';
 import { Filter } from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
+import css from "./FormContainer.module.css"
 
 export class App extends Component {
   state = {
@@ -59,9 +60,10 @@ export class App extends Component {
     const filteredContacts = this.getFilteredContacts();
     return (
       <>
-        <h1>Phonebook</h1>
+      <div className={css.formContainer}>
+        <h1 className={css.titleCard}>Phonebook</h1>
         <ContactForm onSubmit={this.formSubmitHandler} />
-        <h2>Contacts</h2>
+        <h2 className={css.titleCard}>Contacts</h2>
         <Filter
           onChange={this.changeFilter}
           value={filter}
@@ -72,6 +74,7 @@ export class App extends Component {
           contacts={filteredContacts}
           onButtonDelete={this.deleteContact}
         />
+        </div>
       </>
     );
   }
