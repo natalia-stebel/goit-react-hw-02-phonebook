@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 
 
- const ContactItem = ({ id, name, number, onButtonDelete }) => {
+ const ContactItem = ({ name, number, onButtonDelete }) => {
   return (
     <li>
       {name}: {number}
       <button
         name="button"
         type="button"
-        onClick={() => onButtonDelete(id)}
+        onClick={onButtonDelete}
       >
         Delete
       </button>
