@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
       <button
         name="button"
         type="button"
-        onClick={onButtonDelete}
+        onClick={() => onButtonDelete(id)}
       >
         Delete
       </button>
